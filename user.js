@@ -2,7 +2,7 @@
 var express = require('express'); // requre the express framework
 var app = express();
 var fs = require('fs'); //require file system object
-
+const port = process.env.PORT || 3006;
 // Endpoint to Get a list of users
 app.get('/getUsers', function(req, res){
     fs.readFile(__dirname + "/" + "users.json", 'utf8', function(err, data){
